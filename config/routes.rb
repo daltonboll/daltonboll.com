@@ -3,16 +3,12 @@ Rails.application.routes.draw do
   # Redirect the root path (home page)
   root 'pages#home'
 
+  # Redirect 'navmenu'-style pages
   get 'help' => 'pages#help'
-
   get 'contact' => 'pages#contact'
-
   get 'about' => 'pages#about'
-
   get 'blog' => 'pages#blog'
-
   get 'resume' => 'pages#resume'
-
   get 'projects' => 'pages#projects'
 
   # The priority is based upon order of creation: first created -> highest priority.
