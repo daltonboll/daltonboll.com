@@ -5,9 +5,9 @@
     <nav>
       <!-- TODO: CUSTOMIZE THIS -->
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <% @header_links.each do |link_text, path| %>
+        <li><%= link_to link_text, path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>

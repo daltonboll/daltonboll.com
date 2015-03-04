@@ -8,6 +8,6 @@ module PagesHelper
     else
       return "#{page_title} | #{base_title}"
     end
-    
   end
+  
 end
