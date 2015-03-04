@@ -1,17 +1,19 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+  
+  # Redirect the root path (home page)
+  root 'pages#home'
 
-  get 'pages/help'
+  get 'help' => 'pages#help'
 
-  get 'pages/contact'
+  get 'contact' => 'pages#contact'
 
-  get 'pages/about'
+  get 'about' => 'pages#about'
 
-  get 'pages/blog'
+  get 'blog' => 'pages#blog'
 
-  get 'pages/resume'
+  get 'resume' => 'pages#resume'
 
-  get 'pages/projects'
+  get 'projects' => 'pages#projects'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
