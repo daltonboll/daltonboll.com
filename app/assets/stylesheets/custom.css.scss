@@ -6,6 +6,7 @@ $gray-medium-light: #eaeaea;
 $washed-blue: #87A4FA;
 $washed-blue-light: #AFC2FA;
 $washed-orange: #FA995C;
+$washed-gray-dark: #474747;
 $fancy-font: 'Open Sans', sans-serif;
 
 
@@ -74,31 +75,43 @@ p {
   margin-right: 10px;
   margin-left: 10px;
   font-size: 1.7em;
-  color: $washed-blue;
-  text-transform: uppercase;
+  color: white;
   letter-spacing: -1px;
   padding-top: 9px;
+  padding-bottom: 10px;
+  /*
+  padding-bottom: 10px;
+  padding-right: 6px;
+  padding-left: 6px;
+  */
   font-weight: bold;
   font-family: $fancy-font;
   
   &:hover {
-    color: $washed-blue-light;
     text-decoration: none;
+    //background-color: #656565;
   }
 }
 
 .navbar {
-  background-color: #474747;
+  background-color: $washed-gray-dark;
 }
 
 .navbar-inverse .navbar-nav > li > a {
   font-family: $fancy-font;
   color: white;
-  text-transform: uppercase;
   font-size: 1.3em;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  padding-right: 6px;
+  padding-left: 6px;
+  margin-top: 9px;
+  margin-right: 8px;
+  margin-left: 8px;
   
   &:hover {
     color: $washed-blue;
+    background-color: gray;
   }
 }
 
