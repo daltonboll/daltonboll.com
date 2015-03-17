@@ -8,6 +8,10 @@ $gray-medium-light: #eaeaea;
 /* universal */
 body {
   padding-top: 70px;
+  background-image: url(background-blur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 section {
