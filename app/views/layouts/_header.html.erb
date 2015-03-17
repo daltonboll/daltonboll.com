@@ -1,13 +1,36 @@
-<!-- <header class="navbar navbar-fixed-top navbar-inverse"> -->
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Help",   help_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
-      </ul>
-    </nav>
-  </div>
+<header>
+	<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="" class="navbar-brand">Wiredwiki</a>
+			</div>
+			<div class="collpase navbar-collapse" id="example">
+				<ul class="nav navbar-nav">
+					<li><a href="">Link1</a></li>
+					<li class="active"><a href="">Link2</a></li>
+				</ul>
+
+				<a href="" class="btn btn-primary navbar-btn">A button</a>
+
+				<form action="" class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="search this out">
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Hello World</h1>
+				<h3>Navbar in Bootstrap</h3>
+			</div> 
+		</div> 
 </header>

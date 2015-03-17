@@ -19,7 +19,6 @@ module PagesHelper
       "Projects" => projects_path,
       "Resume" => resume_path,
       "Contact" => contact_path,
-      "Help" => help_path
     }
   end
   
