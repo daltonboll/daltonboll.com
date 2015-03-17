@@ -1,17 +1,13 @@
 <!-- <header class="navbar navbar-fixed-top navbar-inverse"> -->
-<header>
-    <div class="navbar">
-        <!-- TODO: CUSTOMIZE THIS -->
-        <div class="logo">
-            <%= link_to "Dalton Boll", root_path %>
-        </div>
-        
-        <div class="navbar-links">
-            <ul>
-                <% @header_links.each do |link_text, path| %>
-                <li><%= link_to link_text, path %></li>
-                <% end %>
-            </ul>
-        </div>
-    </div>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "sample app", '#', id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",   '#' %></li>
+        <li><%= link_to "Help",   '#' %></li>
+        <li><%= link_to "Log in", '#' %></li>
+      </ul>
+    </nav>
+  </div>
 </header>
