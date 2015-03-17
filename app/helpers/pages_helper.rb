@@ -10,4 +10,27 @@ module PagesHelper
     end
   end
   
+  # A Hash containing Header link pairs with link text and its link path
+  def header_links
+    @header_links = {
+      "Home" => root_path,
+      "About" => about_path,
+      "Blog" => blog_path,
+      "Projects" => projects_path,
+      "Resume" => resume_path,
+      "Contact" => contact_path,
+      "Help" => help_path
+    }
+  end
+  
+  # A Hash containing Footer link pairs with link text and its link path
+  def footer_links
+    @footer_links = {
+      "Google+" => "https://plus.google.com/+DaltonBoll",
+      "Twitter" => "https://twitter.com/DaltonBoll",
+      "LinkedIn" => "http://www.linkedin.com/in/daltonboll/",
+      "Facebook" => "https://www.facebook.com/dalton.boll"
+    }
+  end
+  
 end

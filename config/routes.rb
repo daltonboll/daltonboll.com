@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'users/new'
+
   # Redirect the root path (home page)
   root 'pages#home'
 
@@ -10,6 +12,9 @@ Rails.application.routes.draw do
   get 'blog' => 'pages#blog'
   get 'resume' => 'pages#resume'
   get 'projects' => 'pages#projects'
+  
+  # Redirect signup page
+  get 'signup'  => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
