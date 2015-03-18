@@ -1,16 +1,16 @@
 <header>
-	<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-menu">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<%= link_to image_tag("logo-200x35.png"), root_path, id: "logo" %>
-			</div>
-			<div class="collpase navbar-collapse" id="mobile-menu">
-				<ul class="nav navbar-nav navbar-right">
+    <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to image_tag("logo-200x35.png"), root_path, id: "logo" %>
+            </div>
+            <div class="collapse navbar-collapse" id="#example">
+                <ul class="nav navbar-nav navbar-right">
                     <% param_action = params[:action]
                     @header_links.each do |link_text, data|
                         curr_action = data[:action]
@@ -23,14 +23,13 @@
                         <% end %>
                     <% end %>
                 </ul>
-			</div>
-
-		</div>
-	</div>
-	<div class="jumbotron">
-		<div class="container">
-			<h1>Hello World</h1>
-			<h3>Navbar in Bootstrap</h3>
-		</div> 
-	</div> 
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello World</h1>
+            <h3>Navbar in Bootstrap</h3>
+        </div> 
+    </div> 
 </header>
