@@ -1,5 +1,5 @@
 // for nav menu toggle
-$grid-float-breakpoint: 997px;
+$grid-float-breakpoint: 1050px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -118,14 +118,14 @@ p {
   }
 }
 
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > .active-page > a,
+.navbar-inverse .navbar-nav > .active-page > a:hover,
+.navbar-inverse .navbar-nav > .active-page > a:focus {
   border: none;
   border-bottom: thick solid $washed-blue;
   background: none;
+  background-color: transparent;
 }
-
 
 /* footer */
 footer {

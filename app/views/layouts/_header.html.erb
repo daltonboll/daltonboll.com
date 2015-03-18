@@ -18,7 +18,7 @@
                         curr_path = data[:path]
                         # handle active navigation
                         if curr_action == param_action %>
-                            <li class="active"><%= link_to link_text, curr_path %></li>
+                            <li class="active-page"><%= link_to link_text, curr_path %></li>
                         <% else %>
                             <li><%= link_to link_text, curr_path %></li>
                         <% end %>
