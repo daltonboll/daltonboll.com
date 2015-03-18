@@ -13,9 +13,6 @@ $sky-gray: #EEEEEE;
 $fancy-font: 'Open Sans', sans-serif;
 /* $header-font: 'Rokkitt', serif; */
 
-
-
-
 /* universal */
 body {
   padding-top: 70px;
@@ -44,6 +41,15 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+}
+
+#content {
+  //font-family: 'Open Sans', sans-serif;
+  overflow: auto;
+  background-color: white;
+  margin: auto;
+  //margin-top: 3em;
+  //position: relative;
 }
 
 
@@ -128,11 +134,13 @@ p {
 }
 
 /* footer */
-footer {
-  margin-top: 45px;
+.footer {
+  height: 7em;
+  margin-top: 0px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
+  background-color: white;
   
   a {
     color: $gray;
@@ -155,4 +163,15 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+#social-box {
+  //font-family: 'Open Sans', sans-serif;
+  color: white;
+  margin: auto;
+  position: relative;
+  height: 10em;
+  background-image: url(blue-transparent.png);
+  width: 100%;
+  
 }
