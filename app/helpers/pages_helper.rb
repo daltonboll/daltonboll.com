@@ -13,12 +13,12 @@ module PagesHelper
   # A Hash containing Header link pairs with link text and its link path
   def header_links
     @header_links = {
-      "Home" => root_path,
-      "About" => about_path,
-      "Blog" => blog_path,
-      "Projects" => projects_path,
-      "Resume" => resume_path,
-      "Contact" => contact_path,
+      "Home" => {:action => "home", :path => root_path},
+      "About" => {:action => "about", :path => about_path},
+      "Blog" => {:action => "blog", :path => blog_path},
+      "Projects" => {:action => "projects", :path => projects_path},
+      "Resume" => {:action => "resume", :path => resume_path},
+      "Contact" => {:action => "contact", :path => contact_path},
     }
   end
   

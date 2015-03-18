@@ -7,7 +7,9 @@ $washed-blue: #87A4FA;
 $washed-blue-light: #AFC2FA;
 $washed-orange: #FA995C;
 $washed-gray-dark: #474747;
+$sky-gray: #EEEEEE;
 $fancy-font: 'Open Sans', sans-serif;
+$header-font: 'Rokkitt', serif;
 
 
 /* universal */
@@ -100,19 +102,24 @@ p {
 .navbar-inverse .navbar-nav > li > a {
   font-family: $fancy-font;
   color: white;
-  font-size: 1.3em;
-  padding-top: 9px;
-  padding-bottom: 10px;
-  padding-right: 6px;
-  padding-left: 6px;
-  margin-top: 9px;
-  margin-right: 8px;
-  margin-left: 8px;
+  font-size: 1.5em;
+  padding-top: 17px;
+  padding-bottom: 12px;
+  padding-right: 13px;
+  padding-left: 13px;
   
   &:hover {
-    color: $washed-blue;
-    background-color: gray;
+    border: none;
+    border-bottom: thick solid $washed-blue;
   }
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  border: none;
+  border-bottom: thick solid $washed-blue;
+  background: none;
 }
 
 
