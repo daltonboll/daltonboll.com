@@ -9,7 +9,9 @@ gem 'coffee-rails',         '4.1.0'
 gem 'jquery-rails',         '4.0.3'
 gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
+#gem 'sqlite3',     			'1.3.9'
 gem 'pg',          			'0.17.1'
+#gem 'taps'
 gem 'fastimage'
 gem 'sdoc',                 '0.4.0', group: :doc
 

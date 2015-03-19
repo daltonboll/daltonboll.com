@@ -1,26 +1,27 @@
+#development:
+#  adapter: sqlite3
+#  database: db/development.sqlite3
+#  pool: 5
+#  timeout: 5000
+
 development:
   adapter: postgresql
-  encoding: utf8
-  database: project_development
+  encoding: unicode
+  database: daltonboll_development
   pool: 5
-  username: 
+  username: daltonboll
   password:
 
-test: &TEST
+#test:
+#  adapter: sqlite3
+#  database: db/test.sqlite3
+#  pool: 5
+#  timeout: 5000
+
+test:
   adapter: postgresql
-  encoding: utf8
-  database: project_test
+  encoding: unicode
+  database: daltonboll_test
   pool: 5
-  username: 
+  username: daltonboll
   password:
-
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: project_production
-  pool: 5
-  username: 
-  password:
-
-cucumber:
-  <<: *TEST
