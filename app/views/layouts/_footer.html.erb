@@ -5,16 +5,28 @@
   </div>
 </div>
 -->
+<!--
+<footer id="social-box">
+  <h2>This is the feature bar!</h2>
+</footer>
+-->
 
-<footer class="footer">
-  <small>
-    A Personal Website by Dalton Boll
-  </small>
-  <nav>
-    <ul>
-      <% @footer_links.each do |link_text, path| %>
-      <li><%= link_to link_text, path %></li>
-      <% end %>
-    </ul>
-  </nav>
+
+<footer>
+  <div id="social-box">
+    <h2>This is the feature bar!</h2>
+  </div>
+
+  <div class="footer">
+    <small>
+      A Personal Website by Dalton Boll
+    </small>
+    <nav>
+      <ul>
+        <% @footer_links.each do |link_text, path| %>
+        <li><%= link_to link_text, path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
 </footer>
