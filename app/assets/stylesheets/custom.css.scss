@@ -27,15 +27,17 @@ body {
   font-family: $fancy-font;
 }
 
-/* BEGIN fix for keeping footer at bottom */
+/* BEGIN fix for keeping footer at bottom
 html, body {
   height: 100%;
+  margin: 0;
 }
 
 .custom-wrapper {
   height: 100%;
   min-height: 100%;
   position: relative;
+  box-sizing: border-box;
 }
 
 .fill {
@@ -71,6 +73,7 @@ textarea {
   //padding-bottom: 80px; /* Needed to keep footer at bottom of page */
   height: 100%;
   min-height: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -155,11 +158,12 @@ p {
 }
 
 /* footer */
-.footer {
+#footer {
   height: 70px;
   bottom: 0;
   width: 100%;
-  margin-top: 0px;
+  //margin-top: 0px;
+  //position: absolute;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;

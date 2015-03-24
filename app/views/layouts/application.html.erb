@@ -7,15 +7,13 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <div class="custom-wrapper">
-      <%= render 'layouts/header' %>
-      <div class="container fill">
-        <div id="content">
-          <%= yield %>
-        </div>
+    <%= render 'layouts/header' %>
+    <div class="container fill">
+      <div id="content">
+        <%= yield %>
       </div>
-      <%= render 'layouts/footer' %>
     </div>
+    <%= render 'layouts/footer' %>
   </body>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </html>

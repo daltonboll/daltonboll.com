@@ -10,23 +10,30 @@
   <h2>This is the feature bar!</h2>
 </footer>
 -->
+<!-- BEGIN FOOTER FIX WHEN LITTLE CONTENT ON PAGE -->
+<script>
+  $(document).ready(function() {
 
+   var docHeight = $(window).height();
+   var footerHeight = $('#footer').height();
+   var footerTop = $('#footer').position().top + footerHeight;
 
-<footer>
-  <div id="social-box">
-    <h2>This is the feature bar!</h2>
-  </div>
+   if (footerTop < docHeight) {
+    $('#footer').css('margin-top', 10+ (docHeight - footerTop) + 'px');
+   }
+  });
+</script>
+<!-- END FOOTER FIX -->
 
-  <div class="footer">
-    <small>
-      A Personal Website by Dalton Boll
-    </small>
-    <nav>
-      <ul>
-        <% @footer_links.each do |link_text, path| %>
-        <li><%= link_to link_text, path %></li>
-        <% end %>
-      </ul>
-    </nav>
-  </div>
+<footer id="footer">
+  <small>
+    A Personal Website by Dalton Boll
+  </small>
+  <nav>
+    <ul>
+      <% @footer_links.each do |link_text, path| %>
+      <li><%= link_to link_text, path %></li>
+      <% end %>
+    </ul>
+  </nav>
 </footer>
