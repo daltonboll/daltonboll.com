@@ -13,6 +13,7 @@ gem 'jbuilder',             '2.2.3'
 gem 'pg',          			'0.17.1'
 #gem 'taps'
 gem 'fastimage'
+gem "font-awesome-rails"
 gem 'sdoc',                 '0.4.0', group: :doc
 
 group :development, :test do
