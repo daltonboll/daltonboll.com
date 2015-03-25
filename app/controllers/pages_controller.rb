@@ -21,11 +21,11 @@ class PagesController < ApplicationController
   end
 
   def resume
-    @resume_title = "Resume"
+    @resume_title = "My Resume"
   end
 
   def projects
-    @projects_title = "Projects"
+    @projects_title = "My Projects"
   end
   
 end

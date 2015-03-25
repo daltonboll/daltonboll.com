@@ -140,7 +140,7 @@ p {
 
 /* footer */
 #footer-bar {
-  height: 70px;
+  height: 110px;
   bottom: 0;
   width: 100%;
   //margin-top: 0px;
@@ -178,8 +178,12 @@ p {
   color: white;
   margin: auto;
   position: relative;
-  height: 70px;
+  height: 110px;
   background-image: url(blue-transparent.png);
   width: 100%;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
   
 }

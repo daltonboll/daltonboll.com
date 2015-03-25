@@ -3,12 +3,11 @@ Rails.application.routes.draw do
   get 'users/new'
 
   # Redirect the root path (home page)
-  root 'pages#home'
+  root 'pages#about'
 
   # Redirect 'navmenu'-style pages
   get 'help' => 'pages#help'
   get 'contact' => 'pages#contact'
-  get 'about' => 'pages#about'
   get 'blog' => 'pages#blog'
   get 'resume' => 'pages#resume'
   get 'projects' => 'pages#projects'
