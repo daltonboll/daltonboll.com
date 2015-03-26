@@ -5,6 +5,7 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
+    <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Open+Sans' %>
   </head>
   <body>
     <%= render 'layouts/header' %>
@@ -15,6 +16,5 @@
     </div>
     <%= render 'layouts/footer' %>
   </body>
-  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Open+Sans' %>
   <%= javascript_include_tag 'application' %>
 </html>

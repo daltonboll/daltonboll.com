@@ -144,9 +144,17 @@ p {
   background-color: transparent;
 }
 
-/* infobox */
+/* about page */
+.info-box {
+  margin: auto;
+}
+
 #personal-photo {
   margin: 5px;
+}
+
+.about-content {
+  border-top: thick solid;
 }
 
 .social-links {
