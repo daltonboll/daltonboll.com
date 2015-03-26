@@ -158,6 +158,17 @@ p {
   color: black;
 }
 
+.about-content {
+  padding-left: 12%;
+  padding-right: 12%;
+  text-align: left;
+
+  > ul > li {
+    font-size: 1.1em;
+    line-height: 1.7em;
+  }
+}
+
 #personal-photo {
   margin: 5px;
 }
