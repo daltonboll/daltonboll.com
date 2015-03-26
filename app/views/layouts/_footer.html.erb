@@ -1,17 +1,17 @@
 <footer id="footer">
-  <div class="container-fluid" id="social-box">
-    <h2>This is the feature bar!</h2>
+  <div class="container-fluid center" id="social-box">
+    <h2>Get social and follow me:</h2>
+    <ul>
+      <span class="social-box-button"><a href="https://plus.google.com/+DaltonBoll" target=_blank><li><i class="fa fa-3x fa-google-plus"></i></li></a></span>
+      <span class="social-box-button"><a href="https://twitter.com/DaltonBoll" target=_blank><li><i class="fa fa-3x fa-twitter"></i></li></a></span>
+      <span class="social-box-button"><a href="http://www.linkedin.com/in/daltonboll/" target=_blank><li><i class="fa fa-3x fa-linkedin"></i></li></a></span>
+      <span class="social-box-button"><a href="https://www.facebook.com/dalton.boll" target=_blank><li><i class="fa fa-3x fa-facebook"></i></li></a></span>
+      <span class="social-box-button"><a href="https://github.com/daltonboll" target=_blank><li><i class="fa fa-3x fa-github"></i></li></a></span>
+    </ul>
   </div>
-  <div class="container" id="footer-bar">
-    <small>
-      A personal website by Dalton Boll
-    </small>
-    <nav>
-      <ul>
-        <% @footer_links.each do |link_text, path| %>
-        <li><%= link_to link_text, path %></li>
-        <% end %>
-      </ul>
-    </nav>
+  <div class="container-fluid center" id="footer-bar">
+    <p>More of my sites:</p>
+    <p><a href="http://techmymom.com" target=_blank>techmymom.com</a> | <a href="http://phitaubearpong.com" target=_blank>phitaubearpong.com</a></p>
+    <small>A personal website by Dalton Boll &copy;2015</small>
   </div>
 </footer>

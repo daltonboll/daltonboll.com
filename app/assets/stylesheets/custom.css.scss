@@ -212,27 +212,10 @@ p {
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   background-color: white;
-  
-  a {
-    color: $gray;
-    
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  
-  small {
-    float: left;
-  }
-  
-  ul {
-    float: right;
-    list-style: none;
-    
-    li {
-      float: left;
-      margin-left: 15px;
-    }
+
+  p {
+    padding: 0px;
+    margin: 0px;
   }
 }
 
@@ -243,9 +226,33 @@ p {
   height: 110px;
   background-image: url(blue-transparent.png);
   width: 100%;
+  /* for centered alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   h1, h2, h3, h4, h5, h6 {
     color: white;
+    float: left;
   }
+
+  ul {
+    list-style: none;
   
+    li {
+      float: left;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.social-box-button > a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+    text-decoration: none;
+  }
 }
