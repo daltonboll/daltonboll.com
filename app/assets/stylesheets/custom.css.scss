@@ -149,12 +149,12 @@ p {
   margin: auto;
 }
 
-#personal-photo {
-  margin: 5px;
+.about-content > h1, h2, h3, h4, h5, h6 {
+  color: black;
 }
 
-.about-content {
-  border-top: thick solid;
+#personal-photo {
+  margin: 5px;
 }
 
 .social-links {
