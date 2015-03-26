@@ -10,6 +10,11 @@ $washed-blue-light: #AFC2FA;
 $washed-orange: #FA995C;
 $washed-gray-dark: #474747;
 $sky-gray: #EEEEEE;
+$twitter-color: #58ACEB;
+$linkedin-color: #2E8DD7;
+$facebook-color: #4965A0;
+$googleplus-color: #DD4B39;
+$github-color: #323131;
 $fancy-font: 'Open Sans', sans-serif;
 /* $header-font: 'Rokkitt', serif; */
 
@@ -152,6 +157,36 @@ p {
 /* infobox */
 #personal-photo {
   margin: 5px;
+}
+
+.social-links {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.social-button > a:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.social-twitter > a {
+  color: $twitter-color;
+}
+
+.social-facebook > a {
+  color: $facebook-color;
+}
+
+.social-googleplus > a {
+  color: $googleplus-color;
+}
+
+.social-linkedin > a {
+  color: $linkedin-color;
+}
+
+.social-github > a {
+  color: $github-color;
 }
 
 /* footer */
