@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
       # TODO: Change root_path to a "thanks for your message" page
       redirect_to root_path, notice: "Thank you for your message."
     else
-      render :contact
+      render :new
     end
   end
 
