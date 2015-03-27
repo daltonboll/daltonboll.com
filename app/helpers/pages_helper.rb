@@ -26,8 +26,9 @@ module PagesHelper
     @footer_links = {
       "Google+" => "https://plus.google.com/+DaltonBoll",
       "Twitter" => "https://twitter.com/DaltonBoll",
-      "LinkedIn" => "http://www.linkedin.com/in/daltonboll/",
-      "Facebook" => "https://www.facebook.com/dalton.boll"
+      "LinkedIn" => "https://www.linkedin.com/in/daltonboll/",
+      "Facebook" => "https://www.facebook.com/dalton.boll",
+      "GitHub" => "https://github.com/daltonboll"
     }
   end
   
