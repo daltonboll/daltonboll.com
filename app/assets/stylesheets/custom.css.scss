@@ -8,13 +8,16 @@ $gray-medium-light: #eaeaea;
 $washed-blue: #87A4FA;
 $washed-blue-light: #AFC2FA;
 $washed-orange: #FA995C;
-$washed-gray-dark: #474747;
+$washed-gray-dark: #4A4F4E;
 $sky-gray: #EEEEEE;
 $twitter-color: #58ACEB;
 $linkedin-color: #2E8DD7;
 $facebook-color: #4965A0;
 $googleplus-color: #DD4B39;
 $github-color: #323131;
+$mint-green: #13b8a6;
+$mint-green-light: #13e7d0;
+$mint-gray: #EFF2F3;
 $fancy-font: 'Open Sans', sans-serif;
 /* $header-font: 'Rokkitt', serif; */
 
@@ -117,6 +120,15 @@ p {
   margin-bottom: 10px;
 }
 
+a {
+  color: $mint-green;
+  font-weight: bold;
+
+  &:hover {
+    color: $mint-green-light;
+  }
+}
+
 
 /* header */
 #logo {
@@ -151,7 +163,7 @@ p {
   
   &:hover {
     border: none;
-    border-bottom: thick solid $washed-blue;
+    border-bottom: thick solid $mint-green;
   }
 }
 
@@ -159,7 +171,7 @@ p {
 .navbar-inverse .navbar-nav > .active-page > a:hover,
 .navbar-inverse .navbar-nav > .active-page > a:focus {
   border: none;
-  border-bottom: thick solid $washed-blue;
+  border-bottom: thick solid $mint-green;
   background: none;
   background-color: transparent;
 }
@@ -220,9 +232,16 @@ p {
 
 /* contact page */
 .contact-button {
-  background-color: white;
-  border: 2px solid #ccc;
+  background-color: $mint-green;
+  border: 2px solid white;
   box-sizing: border-box;
+  color: white;
+
+  &:hover {
+    background-color: $mint-green-light;
+    color:white;
+    border: 2px solid white;
+  }
 }
 
 .contact-input {
@@ -240,9 +259,8 @@ p {
   bottom: 0;
   width: 100%;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  background-color: white;
+  color: white;
+  background-color: $washed-gray-dark;
 
   p {
     padding: 0px;
@@ -255,7 +273,7 @@ p {
   margin: auto;
   position: relative;
   height: 110px;
-  background-image: url(blue-transparent.png);
+  background-image: url(green-transparent.png);
   width: 100%;
   /* for centered alignment */
   display: flex;
