@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   before_filter :header_links # Allow @header_links from PagesHelper to be accessible
   before_filter :footer_links # Allow @footer_links from PagesHelper to be accessible
 
-  def new
+  def contact
     @message = Message.new
     @contact_title = "Contact Me"
   end
@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
       MessageMailer.notify_sender(@message).deliver_now
       redirect_to message_received_path, notice: "Thank you for your message."
     else
-      render :new
+      render :contact
     end
   end
 

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   #resources :messages, only: [:new, :create]
   # Messages routing
-  get 'contact' => 'messages#new'
+  get 'contact' => 'messages#contact'
   post 'messages' => 'messages#create'
   get 'message_received' => 'pages#message_received'
 
