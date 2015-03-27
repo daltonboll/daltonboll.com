@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Hello <%= @msg.name %>,</p>
+    <p>Thank you very much for contacting me at daltonboll.com. I will do my best to get back to you as soon as possible. In the meantime, why not check out my <a href="http://www.daltonboll.com/blog">blog</a>?</p>
+
+    <p>For your records, a copy of the message you submitted is displayed below:</p>
+    <hr/>
+    <p>"<strong><%= @msg.content %></strong>"</p>
+    <hr/>
+    
+    <br>
+    Best,
+    <br>
+    Dalton Boll
+    <br>
+    daltonboll.com</p>
+  </body>
+</html>

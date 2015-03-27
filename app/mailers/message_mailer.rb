@@ -10,13 +10,9 @@ class MessageMailer < ApplicationMailer
 
   def notify_sender(msg)
   	@msg = msg
-  	new_content = "Hello #{@msg.name},\n\nThank you very much for your message. For your records,"\
-  	" a copy of your message is displayed below:\n----------\n\"#{@msg.content}\"\n----------\n\nI will do my best to get back to "\
-  	"you as soon as possible. In the meantime, why not check out my blog?\n\nBest,\nDalton Boll\ndaltonboll.com"
-
   	@notify_subject = "Message received"
   	@from_name = "Dalton Boll"
 
-  	mail to: @msg.email, from: @from_name, subject: @notify_subject, body: new_content
+  	mail to: @msg.email, from: @from_name, subject: @notify_subject, reply_to: $my_email
   end
 end
