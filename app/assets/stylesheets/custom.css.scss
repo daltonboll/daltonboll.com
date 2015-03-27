@@ -1,23 +1,21 @@
-// for nav menu toggle
+/* for nav menu toggle */
 $grid-float-breakpoint: 1050px;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* mixins, variables, etc. */
-$gray-medium-light: #eaeaea;
-$washed-blue: #87A4FA;
-$washed-blue-light: #AFC2FA;
-$washed-orange: #FA995C;
-$washed-gray-dark: #4A4F4E;
-$sky-gray: #EEEEEE;
 $twitter-color: #58ACEB;
 $linkedin-color: #2E8DD7;
 $facebook-color: #4965A0;
 $googleplus-color: #DD4B39;
 $github-color: #323131;
+
+$washed-gray-dark: #4A4F4E;
 $mint-green: #13b8a6;
 $mint-green-light: #13e7d0;
 $mint-gray: #EFF2F3;
+
 $fancy-font: 'ProximaNova-Regular', sans-serif;
 
 /* universal */
@@ -170,17 +168,9 @@ a {
   float: left;
   margin-right: 10px;
   margin-left: 10px;
-  font-size: 1.7em;
   color: white;
-  letter-spacing: -1px;
   padding-top: 9px;
   padding-bottom: 10px;
-  font-weight: bold;
-  font-family: $fancy-font;
-  
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 .navbar {
