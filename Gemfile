@@ -14,6 +14,7 @@ gem 'pg',          			'0.17.1'
 #gem 'taps'
 gem 'fastimage'
 gem "font-awesome-rails"
+gem 'devise', '~> 3.4.1'
 gem 'sitemap_generator'
 gem 'sdoc',                 '0.4.0', group: :doc
 
@@ -21,6 +22,7 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
+  gem 'foreman'
 end
 
 group :test do
