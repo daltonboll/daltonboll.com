@@ -9,9 +9,9 @@
 
     <p>For your records, a copy of the message you submitted is displayed below:</p>
     <hr/>
-    <p>"<strong><%= @msg.content %></strong>"</p>
+    <strong><%=simple_format h @msg.content %></strong>
     <hr/>
-    
+
     <br>
     Best,
     <br>

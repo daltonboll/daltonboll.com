@@ -8,7 +8,7 @@
     <hr/>
     <p><strong>Name: </strong><%= @msg.name %></p>
     <p><strong>Email: </strong><%= @msg.email %></p>
-    <p>"<%= @msg.content %>"</p>
+    <p><%=simple_format h @msg.content %></p>
     <hr/>
   </body>
 </html>
