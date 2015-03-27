@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
-  resources :messages, only: [:new, :create]
+  #resources :messages, only: [:new, :create]
+  # Messages routing
+  get 'contact' => 'messages#new'
+  post 'messages' => 'messages#create'
 
   get 'users/new'
 
@@ -9,7 +12,7 @@ Rails.application.routes.draw do
 
   # Redirect 'navmenu'-style pages
   get 'help' => 'pages#help'
-  get 'contact' => 'pages#contact'
+  #get 'contact' => 'pages#contact'
   get 'blog' => 'pages#blog'
   get 'resume' => 'pages#resume'
   get 'projects' => 'pages#projects'
