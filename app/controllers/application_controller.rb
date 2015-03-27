@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   # Ensure 301 redirect from heroku
   def ensure_domain
-    if request.env['HTTP_HOST'] != APP_DOMAIN && ENV["RAILS_ENV"] != 'development'
+    if request.env['HTTP_HOST'].include? "heroku"
       # HTTP 301 is a "permanent" redirect
       redirect_to "http://#{APP_DOMAIN}", :status => 301
     end

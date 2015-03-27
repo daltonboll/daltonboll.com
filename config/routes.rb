@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'messages/new'
+  resources :messages, only: [:new, :create]
 
   get 'users/new'
 
