@@ -17,4 +17,17 @@ class MessagesControllerTest < ActionController::TestCase
     assert_redirected_to new_message_path
   end
 
+  test "failed post" do
+    post :create, message: {
+      name: '', 
+      email: '', 
+      subject: '', 
+      content: '' 
+    }
+    
+    [:name, :email, :subject, :content].each do |attr|
+      assert_select 'li', "#{attr.capitalize} can't be blank"
+    end
+  end
+
 end
