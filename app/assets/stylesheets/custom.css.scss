@@ -18,7 +18,7 @@ $github-color: #323131;
 $mint-green: #13b8a6;
 $mint-green-light: #13e7d0;
 $mint-gray: #EFF2F3;
-$fancy-font: 'Raleway', sans-serif;
+$fancy-font: 'ProximaNova-Regular', sans-serif;
 /* $header-font: 'Rokkitt', serif; */
 
 /* universal */
@@ -125,10 +125,10 @@ h3 {
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+  font-size: 19px;
+  //line-height: 1.7em;
   margin: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 a {
