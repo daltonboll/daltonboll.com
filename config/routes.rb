@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'messages/new'
+
   get 'users/new'
 
   # Redirect the root path (home page)

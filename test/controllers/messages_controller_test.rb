@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UsersControllerTest < ActionController::TestCase
+class MessagesControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :redirect

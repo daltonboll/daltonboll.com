@@ -7,4 +7,22 @@ class MessageTest < ActiveSupport::TestCase
       assert msg.respond_to? attr
     end
   end
+
+  test 'should accept valid attributes' do
+    valid_attrs = {
+      name: 'dalton',
+      email: 'dalton@example.com',
+      subject: 'hello there!',
+      content: 'goodbye now!'
+    }
+
+    msg = Message.new valid_attrs
+
+    assert msg.valid?
+  end
+
+  test 'attributes can not be blank' do
+    msg = Message.new
+    refute msg.valid?
+  end
 end
