@@ -85,8 +85,8 @@ hr {
 /* typography */
 @font-face {
   font-family: 'ProximaNova-Regular';
-  src: url('webfonts/proxima_nova_regular.eot');
-  src: url('webfonts/proxima_nova_regular?#iefix') format('embedded-opentype'),
+  src:font-url('webfonts/proxima_nova_regular.eot');
+  src:font-url('webfonts/proxima_nova_regular?#iefix') format('embedded-opentype'),
     url('webfonts/proxima_nova_regular.woff2') format('woff2'),
     url('webfonts/proxima_nova_regular.woff') format('woff'),
     url('webfonts/proxima_nova_regular.ttf') format('truetype');
