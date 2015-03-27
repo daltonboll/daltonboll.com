@@ -13,6 +13,8 @@ class MessagesController < ApplicationController
 
     if @message.valid?
       MessageMailer.message_me(@message).deliver_now
+      MessageMailer.notify_sender(@message).deliver_now
+      # TODO: Change root_path to a "thanks for your message" page
       redirect_to root_path, notice: "Thank you for your message."
     else
       render :new
