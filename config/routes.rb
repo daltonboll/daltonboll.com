@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Messages routing
   get 'contact' => 'messages#new'
   post 'messages' => 'messages#create'
+  get 'message_received' => 'pages#message_received'
 
   get 'users/new'
 

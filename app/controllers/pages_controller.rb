@@ -27,5 +27,9 @@ class PagesController < ApplicationController
   def projects
     @projects_title = "My Projects"
   end
+
+  def message_received
+    @message_received_title = "Message Received"
+  end
   
 end
