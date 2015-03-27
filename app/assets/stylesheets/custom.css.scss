@@ -38,6 +38,22 @@ section {
 
 textarea {
   resize: vertical;
+  height: 120px;
+  width: 80%;
+  background-color: #FAFAFA;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  line-height: 1.2em;
+}
+
+input {
+  background-color: #FAFAFA;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
 .center {
@@ -62,7 +78,6 @@ hr {
   border-width: 3px 0;
   width: 80%;
 }
-
 
 /* typography */
 h1, h2, h3, h4, h5, h6 {
@@ -201,6 +216,18 @@ p {
 
 .social-github > a {
   color: $github-color;
+}
+
+/* contact page */
+.contact-button {
+  background-color: white;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+.contact-input {
+  width: 80%;
+  line-height: 2.5em;
 }
 
 /* footer */

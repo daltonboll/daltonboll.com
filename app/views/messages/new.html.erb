@@ -1,4 +1,3 @@
-<h1>Messages#new</h1>
 <div class="container-fluid">
   <h1>Contact Me</h1>
   <hr/>
@@ -17,33 +16,33 @@
         <% end %>
 
         <div class="field">
-          <p>Name:</p>
-          <%= f.text_field :name %>
+          <h4>Name:</h4>
+          <%= f.text_field :name, class: "contact-input" %>
         </div>
-
+        </br>
         <div class="field">
-          <p>Email:</p>
-          <%= f.email_field :email %>
+          <h4>Email:</h4>
+          <%= f.email_field :email, class: "contact-input" %>
         </div>
-
+        </br>
         <div class="field">
-          <p>Subject:</p>
-          <%= f.text_field :subject %>
+          <h4>Subject:</h4>
+          <%= f.text_field :subject, class: "contact-input" %>
         </div>
-
+        </br>
         <div class="field">
-          <p>Message:</p>
+          <h4>Message:</h4>
           <%= f.text_area :content %>
         </div>
-
+        </br>
         <div class="actions">
-          <%= f.submit 'Send', class: 'button' %>
+          <%= f.submit 'SEND', class: 'btn btn-default btn-lg contact-button' %>
         </div>
       <% end %>
     </div>
 
     <div class="col-md-6">
-      <p>Got a question? Want to let me know about a cool job opportunity or project? Just wanna say hellow? Then fill out this form and hit the "Submit" button, and I'll get back to you as soon as possible!</p>
+      <p>Got a question? Want to let me know about a cool job opportunity or project? Just wanna say hello? Then fill out this form and hit the 'SEND' button, and I'll get back to you as soon as possible!</p>
       <p>You can also contact me through social media:</p>
       <ul>
         <li>Google+</li>
