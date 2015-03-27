@@ -18,7 +18,7 @@ $github-color: #323131;
 $mint-green: #13b8a6;
 $mint-green-light: #13e7d0;
 $mint-gray: #EFF2F3;
-$fancy-font: 'Open Sans', sans-serif;
+$fancy-font: 'Raleway', sans-serif;
 /* $header-font: 'Rokkitt', serif; */
 
 /* universal */
@@ -156,6 +156,7 @@ a {
   font-family: $fancy-font;
   color: white;
   font-size: 1.5em;
+  font-weight: normal;
   padding-top: 17px;
   padding-bottom: 12px;
   padding-right: 13px;
