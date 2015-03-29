@@ -14,11 +14,11 @@
         <p>My current big adventure takes place at the beautiful University of California, Berkeley, where I'm studying Computer Science. Every day is like a dream, and I don't want to wake up!</p>
 
         <p>Want to be a part of my adventure? <%= link_to "Get in touch with me", contact_path %> and let's do something incredible together!</p>
-        <div class="social-links center">
+        <div class="social-links center social-button">
         <% @social_buttons.each do |social_button| %>
-          <a href="<%= social_button.link %>" target=_blank class="<%= social_button.custom_class %> social-button">
+          <a href="<%= social_button.link %>" target=_blank>
             <span class="fa-stack fa-3x">
-              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-circle fa-stack-2x <%= social_button.custom_class %>"></i>
               <i class="fa <%= social_button.font_awesome_class %> fa-stack-1x fa-inverse"></i>
             </span>
           </a>
