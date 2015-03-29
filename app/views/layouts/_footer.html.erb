@@ -2,11 +2,15 @@
   <div class="container-fluid center" id="social-box">
     <h2>Get social and follow me:</h2>
     <ul>
-      <span class="social-box-button"><a href="https://plus.google.com/+DaltonBoll" target=_blank><li><i class="fa fa-2x fa-google-plus"></i></li></a></span>
+    <% @social_buttons.each do |social_button| %>
+      <span class="social-box-button"><a href=<%= social_button.link %> target=_blank><li><i class=<%= "fa fa-2x #{social_button.font_awesome_class}" %>></i></li></a></span>
+    <% end %>
+      <!--
       <span class="social-box-button"><a href="https://twitter.com/DaltonBoll" target=_blank><li><i class="fa fa-2x fa-twitter"></i></li></a></span>
       <span class="social-box-button"><a href="https://www.linkedin.com/in/daltonboll/" target=_blank><li><i class="fa fa-2x fa-linkedin"></i></li></a></span>
       <span class="social-box-button"><a href="https://www.facebook.com/dalton.boll" target=_blank><li><i class="fa fa-2x fa-facebook"></i></li></a></span>
       <span class="social-box-button"><a href="https://github.com/daltonboll" target=_blank><li><i class="fa fa-2x fa-github"></i></li></a></span>
+    -->
     </ul>
   </div>
   <div class="container-fluid center" id="footer-bar">
