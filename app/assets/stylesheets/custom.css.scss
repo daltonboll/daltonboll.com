@@ -74,6 +74,16 @@ input {
   box-sizing: border-box;
 }
 
+.padded-content > h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+.padded-content {
+  padding-left: 12%;
+  padding-right: 12%;
+  text-align: left;
+}
+
 hr {
   border-width: 3px 0;
   width: 80%;
@@ -169,6 +179,11 @@ a {
   margin-right: auto;
 }
 
+.pad-image {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 
 /* header */
 #logo {
@@ -212,16 +227,6 @@ a {
 /* about page */
 .info-box {
   margin: auto;
-}
-
-.about-content > h1, h2, h3, h4, h5, h6 {
-  color: black;
-}
-
-.about-content {
-  padding-left: 12%;
-  padding-right: 12%;
-  text-align: left;
 }
 
 #personal-photo {
