@@ -24,7 +24,7 @@ module PagesHelper
   class SocialButton
     attr_reader :name, :link, :font_awesome_class, :custom_class
 
-    def initialize(name, link, font_awesome_class=nil, custom_class=nil)
+    def initialize(name, link, font_awesome_class, custom_class)
       @name = name
       @link = link
       @font_awesome_class = font_awesome_class
@@ -37,6 +37,12 @@ module PagesHelper
   
   # A Hash containing Footer link pairs with link text and its link path
   def footer_links
+    googleplus = SocialButton.new("Google+", "https://plus.google.com/+DaltonBoll", "fa-google-plus", "social-googleplus")
+    twitter = SocialButton.new("Twitter", "https://twitter.com/DaltonBoll", "fa-twitter", "social-twitter")
+    linkedin = SocialButton.new("LinkedIn", "https://www.linkedin.com/in/daltonboll/", "fa-linkedin", "social-linkedin")
+    facebook = SocialButton.new("Facebook", "https://www.facebook.com/dalton.boll", "fa-facebook", "social-facebook")
+    github = SocialButton.new("GitHub", "https://github.com/daltonboll", "fa-github", "social-github")
+    
     @footer_links = {
       "Google+" => "https://plus.google.com/+DaltonBoll",
       "Twitter" => "https://twitter.com/DaltonBoll",
