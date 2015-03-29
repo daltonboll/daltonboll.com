@@ -4,7 +4,7 @@
     <div class="social-box-button">
       <ul>
       <% @social_buttons.each do |social_button| %>
-        <a href=<%= social_button.link %> target=_blank><li><i class="fa fa-2x <%= social_button.font_awesome_class %>"></i></li></a>
+        <li><a href=<%= social_button.link %> target=_blank><i class="fa fa-2x <%= social_button.font_awesome_class %>"></i></a></li>
       <% end %>
       </ul>
     </div>
