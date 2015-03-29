@@ -43,6 +43,7 @@ module PagesHelper
     facebook = SocialButton.new("Facebook", "https://www.facebook.com/dalton.boll", "fa-facebook", "social-facebook")
     github = SocialButton.new("GitHub", "https://github.com/daltonboll", "fa-github", "social-github")
 
+    @social_buttons = [googleplus, twitter, linkedin, facebook, github]
   end
   
 end
