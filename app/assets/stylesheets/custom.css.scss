@@ -184,6 +184,11 @@ a {
   margin-bottom: 25px;
 }
 
+/* tabs */
+.nav-tabs > li > a:hover {
+  background-color: $mint-gray;
+}
+
 
 /* header */
 #logo {
