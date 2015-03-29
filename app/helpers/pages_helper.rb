@@ -35,8 +35,8 @@ module PagesHelper
 
 
   
-  # A Hash containing Footer link pairs with link text and its link path
-  def footer_links
+  # A list containing SocialButtons
+  def social_buttons
     googleplus = SocialButton.new("Google+", "https://plus.google.com/+DaltonBoll", "fa-google-plus", "social-googleplus")
     twitter = SocialButton.new("Twitter", "https://twitter.com/DaltonBoll", "fa-twitter", "social-twitter")
     linkedin = SocialButton.new("LinkedIn", "https://www.linkedin.com/in/daltonboll/", "fa-linkedin", "social-linkedin")
