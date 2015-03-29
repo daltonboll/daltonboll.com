@@ -20,6 +20,20 @@ module PagesHelper
       "contact" => {:action => "contact", :path => contact_path},
     }
   end
+
+  class SocialButton
+    attr_reader :name, :link, :font_awesome_class, :custom_class
+
+    def initialize(name, link, font_awesome_class=nil, custom_class=nil)
+      @name = name
+      @link = link
+      @font_awesome_class = font_awesome_class
+      @custom_class = custom_class
+    end
+
+  end
+
+
   
   # A Hash containing Footer link pairs with link text and its link path
   def footer_links
