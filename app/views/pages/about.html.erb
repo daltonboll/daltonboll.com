@@ -5,25 +5,23 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4 center">
-      	<%= image_tag("me.png", id: "personal-photo") %>
+        <%= image_tag("me.png", id: "personal-photo") %>
       </div>
 
       <div class="col-md-7">
-      	<p><strong>Life can get boring sometimes.</strong> Every day can seem like just another day, but why not have some fun with it? I see each day as an electrifying chance to do something amazing. If I had to write my life on paper, I'd bundle these chances into a series of exciting adventures.</p>
+        <p><strong>Life can get boring sometimes.</strong> Every day can seem like just another day, but why not have some fun with it? I see each day as an electrifying chance to do something amazing. If I had to write my life on paper, I'd bundle these chances into a series of exciting adventures.</p>
 
         <p>My current big adventure takes place at the beautiful University of California, Berkeley, where I'm studying Computer Science. Every day is like a dream, and I don't want to wake up!</p>
 
-      	<p>Want to be a part of my adventure? <%= link_to "Get in touch with me", contact_path %> and let's do something incredible together!</p>
-      	<div class="social-links center">
+        <p>Want to be a part of my adventure? <%= link_to "Get in touch with me", contact_path %> and let's do something incredible together!</p>
+        <div class="social-links center">
         <% @social_buttons.each do |social_button| %>
-      		<span class="<%= social_button.custom_class %> social-button">
-      		    <a href="<%= social_button.link %>" target=_blank>
-      			    <span class="fa-stack fa-3x">
-      			        <i class="fa fa-circle fa-stack-2x"></i>
-      			        <i class="fa <%= social_button.font_awesome_class %> fa-stack-1x fa-inverse"></i>
-      			    </span>
-      		    </a>
-      		</span>
+          <a href="<%= social_button.link %>" target=_blank class="<%= social_button.custom_class %> social-button">
+            <span class="fa-stack fa-3x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa <%= social_button.font_awesome_class %> fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
         <% end %>
         </div>
       </div>
