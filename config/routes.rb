@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   # Redirect signup page
   get 'signup'  => 'users#new'
 
-  # For custom 404 pages
+  # For custom error pages
   match '/404', to: 'errors#file_not_found', via: :all
   match '/422', to: 'errors#unprocessable', via: :all
   match '/500', to: 'errors#internal_server_error', via: :all
@@ -86,4 +86,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #Last route in routes.rb, used for 404 routing errors
+  match '*a', :to => 'errors#file_not_found', via: :all
 end
