@@ -24,8 +24,7 @@ module DaltonbollBlog
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
-    # For custom 404 error pages
-    require Rails.root.join("lib/custom_public_exceptions")
-    config.exceptions_app = CustomPublicExceptions.new(Rails.public_path)
+    # For custom 404 pages
+    config.exceptions_app = self.routes
   end
 end

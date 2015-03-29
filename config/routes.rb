@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'errors/file_not_found'
+
+  get 'errors/unprocessable'
+
+  get 'errors/internal_server_error'
+
   #resources :messages, only: [:new, :create]
   # Messages routing
   get 'contact' => 'messages#contact'
@@ -21,8 +27,10 @@ Rails.application.routes.draw do
   # Redirect signup page
   get 'signup'  => 'users#new'
 
-  #Custom 404 redirection
-  match "/404" => "errors#error404", via: [ :get, :post, :patch, :delete ]
+  # For custom 404 pages
+  match '/404', to: 'errors#file_not_found', via: :all
+  match '/422', to: 'errors#unprocessable', via: :all
+  match '/500', to: 'errors#internal_server_error', via: :all
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
