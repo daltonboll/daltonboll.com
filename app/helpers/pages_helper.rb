@@ -42,14 +42,7 @@ module PagesHelper
     linkedin = SocialButton.new("LinkedIn", "https://www.linkedin.com/in/daltonboll/", "fa-linkedin", "social-linkedin")
     facebook = SocialButton.new("Facebook", "https://www.facebook.com/dalton.boll", "fa-facebook", "social-facebook")
     github = SocialButton.new("GitHub", "https://github.com/daltonboll", "fa-github", "social-github")
-    
-    @footer_links = {
-      "Google+" => "https://plus.google.com/+DaltonBoll",
-      "Twitter" => "https://twitter.com/DaltonBoll",
-      "LinkedIn" => "https://www.linkedin.com/in/daltonboll/",
-      "Facebook" => "https://www.facebook.com/dalton.boll",
-      "GitHub" => "https://github.com/daltonboll"
-    }
+
   end
   
 end
