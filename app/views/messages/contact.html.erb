@@ -2,56 +2,58 @@
 <div class="container-fluid">
   <h1>Contact Me</h1>
   <hr/>
-  <div class="row">
-    <div class="col-md-6">
-      <%= form_for @message do |f| %>
-        <% if @message.errors.any? %>
-          <div id="error_explanation" class="red">
-            <h4 class="red"><%= "#{pluralize(@message.errors.count, "error")} prohibited this message from being sent:" %></h4>
-            <ul>
-              <% @message.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-            <ul>
+  <div class="padded-content">
+    <div class="row">
+      <div class="col-md-6">
+        <%= form_for @message do |f| %>
+          <% if @message.errors.any? %>
+            <div id="error_explanation" class="red">
+              <h4 class="red"><%= "#{pluralize(@message.errors.count, "error")} prohibited this message from being sent:" %></h4>
+              <ul>
+                <% @message.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              <ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <h6>Name:</h6>
+            <%= f.text_field :name, class: "contact-input" %>
+          </div>
+          <br>
+          <div class="field">
+            <h6>Email:</h6>
+            <%= f.email_field :email, class: "contact-input" %>
+          </div>
+          <br>
+          <div class="field">
+            <h6>Subject:</h6>
+            <%= f.text_field :subject, class: "contact-input" %>
+          </div>
+          <br>
+          <div class="field">
+            <h6>Message:</h6>
+            <%= f.text_area :content %>
+          </div>
+          <br>
+          <div class="actions">
+            <%= f.submit 'SEND', class: 'btn btn-default btn-lg contact-button' %>
           </div>
         <% end %>
+      </div>
 
-        <div class="field">
-          <h6>Name:</h6>
-          <%= f.text_field :name, class: "contact-input" %>
-        </div>
-        <br>
-        <div class="field">
-          <h6>Email:</h6>
-          <%= f.email_field :email, class: "contact-input" %>
-        </div>
-        <br>
-        <div class="field">
-          <h6>Subject:</h6>
-          <%= f.text_field :subject, class: "contact-input" %>
-        </div>
-        <br>
-        <div class="field">
-          <h6>Message:</h6>
-          <%= f.text_area :content %>
-        </div>
-        <br>
-        <div class="actions">
-          <%= f.submit 'SEND', class: 'btn btn-default btn-lg contact-button' %>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="col-md-6">
-      <p>Got a question? Want to let me know about a cool job opportunity or project? Just wanna say hello? Then fill out this form and hit the 'SEND' button, and I'll get back to you as soon as possible!</p>
-      <p>You can also contact me through social media:</p>
-      <ul>
-        <li><a href="https://plus.google.com/+DaltonBoll" target=_blank>Google+</a></li>
-        <li><a href="https://twitter.com/DaltonBoll" target=_blank>Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/daltonboll/" target=_blank>LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/dalton.boll" target=_blank>Facebook</a></li>
-        <li><a href="https://github.com/daltonboll" target=_blank>GitHub</a></li>
-      </ul>
+      <div class="col-md-6">
+        <p>Got a question? Want to let me know about a cool job opportunity or project? Just wanna say hello? Then fill out this form and hit the 'SEND' button, and I'll get back to you as soon as possible!</p>
+        <p>You can also contact me through social media:</p>
+        <ul>
+          <li><a href="https://plus.google.com/+DaltonBoll" target=_blank>Google+</a></li>
+          <li><a href="https://twitter.com/DaltonBoll" target=_blank>Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/daltonboll/" target=_blank>LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/dalton.boll" target=_blank>Facebook</a></li>
+          <li><a href="https://github.com/daltonboll" target=_blank>GitHub</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <br>
