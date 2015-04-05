@@ -1,10 +1,35 @@
 <% provide(:title, @resume_title) %>
-<div class="container-fluid center">
+<div class="container-fluid">
   <h1>My Resume</h1>
   <hr/>
-  <h2>Uffda, guess there's not much to see here yet...</h2>
-  <p>This will be my <em>Resume</em> page, where you can see my past experience in a clean layout. While I work on that, feel free to take a look at the <%= link_to "pdf version of my resume", "Dalton_Boll_Resume.pdf", target: "_blank" %>.</p>
-  <%= image_tag("yawning-puppies.gif") %>
-  <br>
-  <br>
+  <div class="padded-content">
+    <h2 class="left-align">EDUCATION</h2>
+    <h5>University of California, Berkeley (2012 – Present)</h5>
+    <ul>
+      <li><em>Bachelor of Arts in Computer Science expected May 2016</em></li>
+      <li>3.534 GPA</li>
+      <li>Relevant Courses: The Structure and Interpretation of Computer Programs (Python, Scheme), Data Structures
+      (Java), Machine Structures (C, MIPS), Linear Algebra and Differential Equations, Introduction to the Internet:
+      Architecture and Protocols (Python), Introduction to Artificial Intelligence (Python), Discrete Mathematics and
+      Probability, Ruby on Rails Web Development (Ruby, Rails)</li>
+    </ul>
+    <hr/>
+
+    <h2 class="left-align">EXPERIENCE</h2>
+    <h5>Epic Systems (Summer 2013, Madison, WI)</h5>
+    <p><em>Computer and Technology Services Intern</em></p>
+    <ul>
+      <li>Worked with the head of the CaTS team to design an Excel spreadsheet processor in C# in an attempt to save thousands of dollars in suspicious MiFi travelling charge discrepancies</li>
+      <li>Developed a new CaTS website using C#.NET and the ASP.NET Web Forms Framework with new features, including stock counters, storage info, and equipment requests, all complete with barcode scanning integration</li>
+      <li>Was given more responsibility in the training and advising of new interns on the CaTS team</li>
+    </ul>
+    </br>
+    <h5>Epic Systems (Summer 2012, Madison, WI)</h5>
+    <p><em>Computer and Technology Services Intern</em></p>
+    <ul>
+      <li>Provided immediate technical support with computer hardware and Windows 7 for senior Epic employees</li>
+      <li>Prepared the configuration and deployment of software and hardware for almost 1000 new Epic employees</li>
+      <li>Set up and configured hundreds of ThinOS thin client workstations which host Epic’s software training programs</li>
+    </ul>
+  </div>
 </div>
