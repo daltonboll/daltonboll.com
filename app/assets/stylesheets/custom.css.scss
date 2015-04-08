@@ -1,5 +1,4 @@
 /* for nav menu toggle */
-/*$grid-float-breakpoint-max: 768px;*/
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -330,7 +329,6 @@ a {
   color: white;
   margin: auto;
   position: relative;
-  height: 110px;
   background-image: url(green-transparent.png);
   width: 100%;
   /* for centered alignment */
