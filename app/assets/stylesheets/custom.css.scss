@@ -339,6 +339,8 @@ a {
   h1, h2, h3, h4, h5, h6 {
     color: white;
     float: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
   ul {
@@ -348,6 +350,7 @@ a {
       float: left;
       margin-left: 15px;
       margin-right: 15px;
+      margin-top: 10px;
     }
   }
 }
