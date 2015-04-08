@@ -336,10 +336,6 @@ img {
   position: relative;
   background-image: url(green-transparent.png);
   width: 100%;
-  /* for centered alignment */
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
   display: inline-block;
 
   h1, h2, h3, h4, h5, h6 {
@@ -348,7 +344,6 @@ img {
       text-align: center;
     }
     color: white;
-    //float: left;
     text-align: right;
     margin-top: 25px;
     margin-bottom: 25px;
