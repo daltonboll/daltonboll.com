@@ -114,7 +114,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .resume-subheading {
+  margin-bottom: 5px;
+}
+
+.resume-heading {
   margin-bottom: 10px;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
 }
 
 h1 {
