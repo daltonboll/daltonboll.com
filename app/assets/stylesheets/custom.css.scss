@@ -192,6 +192,11 @@ a {
 }
 
 /* images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .center-image {
   display: block;
   margin-left: auto;
