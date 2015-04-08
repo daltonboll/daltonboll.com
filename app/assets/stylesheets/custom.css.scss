@@ -343,6 +343,10 @@ img {
   display: inline-block;
 
   h1, h2, h3, h4, h5, h6 {
+    /* when we are using small screens, center text */
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
     color: white;
     //float: left;
     text-align: right;
@@ -357,6 +361,9 @@ img {
     margin-bottom: 25px;
   
     li {
+      @media screen and (max-width: 768px) {
+        float: none;
+      }
       display: inline;
       float: left;
       margin-left: 15px;
@@ -366,7 +373,7 @@ img {
 }
 
 .hidden-social-header {
-  text-align: center !important;
+  //text-align: center !important;
 }
 
 .hidden-social-links {
