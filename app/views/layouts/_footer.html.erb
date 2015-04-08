@@ -1,13 +1,23 @@
 <footer id="footer">
   <div class="container-fluid center" id="social-box">
-    <h2>Get social and follow me:</h2>
-    <div class="social-box-button">
-      <ul>
-      <% @social_buttons.each do |social_button| %>
-        <li><a href=<%= social_button.link %> target=_blank><i class="fa fa-2x <%= social_button.font_awesome_class %>"></i></a></li>
-      <% end %>
-      </ul>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2 class="hidden-xs">Follow me:</h2>
+        <h2 class="visible-xs hidden-social-header">Follow me2!!:</h2>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="social-box-button">
+          <ul>
+          <% @social_buttons.each do |social_button| %>
+            <li><a href=<%= social_button.link %> target=_blank><i class="fa fa-2x <%= social_button.font_awesome_class %>"></i></a></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
+    
+
   </div>
   <div class="container-fluid center" id="footer-bar">
     <p>More of my sites:</p>

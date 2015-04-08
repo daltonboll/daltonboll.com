@@ -337,27 +337,40 @@ img {
   background-image: url(green-transparent.png);
   width: 100%;
   /* for centered alignment */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  display: inline-block;
 
   h1, h2, h3, h4, h5, h6 {
     color: white;
-    float: left;
+    //float: left;
+    text-align: right;
     margin-top: 25px;
     margin-bottom: 25px;
   }
 
   ul {
     list-style: none;
+    padding-left: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
   
     li {
+      display: inline;
       float: left;
       margin-left: 15px;
       margin-right: 15px;
-      margin-top: 10px;
     }
   }
+}
+
+.hidden-social-header {
+  text-align: center !important;
+}
+
+.hidden-social-links {
+  float: none !important;
 }
 
 .social-box-button > ul > li > a {
