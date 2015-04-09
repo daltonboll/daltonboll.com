@@ -2,35 +2,39 @@
 <h1><%= @post.title %></h1>
 <hr/>
 <div class="container-fluid">
-  <p><%= simple_format(@post.body) %></p>
+  <div class="padded-content">
+    <p><%= simple_format(@post.body) %></p>
+  </div>
 </div>
 <hr/>
 <h3 class="center"><%= @post.comments.count %> Comments</h3>
 <hr/>
 <div class="container-fluid comments">
-  <% @post.comments.each do |comment| %>
-    <p><strong><%= comment.name %></strong> &emsp; <date><%= time_ago_in_words(comment.created_at) %> ago</date>
-    </p>
-    <p>
-      <%= simple_format(comment.body) %>
-    </p>
-    <hr/>
-  <% end %>
-  <h5>Leave a comment below:</h5>
-  <%= form_for [@post, Comment.new] do |f| %>
-    <p>
-      <%= f.label :name, "Name*" %></br>
-      <%= f.text_field :name %></br></br>
-      <%= f.label :email, "Email*" %></br>
-      <%= f.text_field :email %></br></br>
-      <%= f.label :website, "Website" %></br>
-      <%= f.text_field :website %></br></br>
-      <%= f.label :body, "Comment*" %></br>
-      <%= f.text_area :body %></br></br>
-      <%= f.submit 'SUBMIT', class: 'btn btn-default btn-lg pretty-button' %>
-    </p>
-  <% end %>
+  <div class="padded-content">
+    <% @post.comments.each do |comment| %>
+      <p><strong><%= comment.name %></strong> &emsp; <date><%= time_ago_in_words(comment.created_at) %> ago</date>
+      </p>
+      <p>
+        <%= simple_format(comment.body) %>
+      </p>
+      <hr/>
+    <% end %>
+    <h5>Leave a comment below:</h5>
+    <%= form_for [@post, Comment.new] do |f| %>
+      <p>
+        <%= f.label :name, "Name*" %></br>
+        <%= f.text_field :name %></br></br>
+        <%= f.label :email, "Email*" %></br>
+        <%= f.text_field :email %></br></br>
+        <%= f.label :website, "Website" %></br>
+        <%= f.text_field :website %></br></br>
+        <%= f.label :body, "Comment*" %></br>
+        <%= f.text_area :body %></br></br>
+        <%= f.submit 'SUBMIT', class: 'btn btn-default btn-lg pretty-button' %>
+      </p>
+    <% end %>
 
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-  <%= link_to 'Back', posts_path %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %>
+  </div>
 </div>
