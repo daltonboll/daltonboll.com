@@ -292,8 +292,8 @@ img {
   color: $github-color;
 }
 
-/* contact page */
-.contact-button {
+/* buttons */
+.pretty-button {
   background-color: $mint-green;
   border: 2px solid white;
   box-sizing: border-box;
@@ -306,6 +306,7 @@ img {
   }
 }
 
+/* contact page */
 .contact-input {
   width: 80%;
   line-height: 2.5em;
@@ -313,6 +314,12 @@ img {
 
 .red {
   color: red;
+}
+
+/* comments */
+date {
+  font-size: 11px;
+  color: gray;
 }
 
 /* footer */
