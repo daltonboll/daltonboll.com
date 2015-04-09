@@ -5,7 +5,7 @@
   <p><%= simple_format(@post.body) %></p>
 </div>
 <hr/>
-<h3 class="center">Comments</h3>
+<h3 class="center"><%= @post.comments.count %> Comments</h3>
 <hr/>
 <div class="container-fluid comments">
   <% @post.comments.each do |comment| %>
