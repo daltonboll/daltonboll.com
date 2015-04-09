@@ -4,11 +4,15 @@
 <hr/>
 <% @comments.each do |comment| %>
   <p><strong><%= comment.name %></strong> commented <%= time_ago_in_words(comment.created_at) %> ago:</p>
+
   <p>"<%= comment.body %>"</p>
+
   <p><em>Email: </em><%= comment.email %> | <em>Website: </em><%= comment.website %> | <em>PostID: </em><%= comment.post_id %></p>
+
   <p><%= link_to 'SHOW', post_comment_path(comment.post_id, comment.id) %> | 
   <%= link_to 'EDIT', edit_post_comment_path(comment.post_id, comment.id) %> | 
   <%= link_to 'DESTROY', post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  
   <hr />
   </br>
 <% end %>

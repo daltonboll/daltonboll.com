@@ -24,6 +24,18 @@ class CommentsController < ApplicationController
     redirect_to @post
   end
 
+  def update
+    respond_to do |format|
+      if @comment.update(comment_params)
+        format.html { redirect_to post_comment_path, notice: 'Comment was successfully updated.' }
+        format.json { render :show, status: :ok, location: post_comment_path }
+      else
+        format.html { render :edit }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
 
     # Use callbacks to share common setup or constraints between actions.
