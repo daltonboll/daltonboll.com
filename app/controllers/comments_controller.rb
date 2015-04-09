@@ -12,6 +12,12 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
+  def show
+  end
+
+  def edit
+  end
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create!(params.require(:comment).permit!)  #TODO: get rid of !

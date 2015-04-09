@@ -1,35 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Comments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Website</th>
-      <th>Body</th>
-      <th>Post</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.name %></td>
-        <td><%= comment.email %></td>
-        <td><%= comment.website %></td>
-        <td><%= comment.body %></td>
-        <td><%= comment.post %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_post_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>All Comments For Post</h1>
+<hr/>
+<% @comments.each do |comment| %>
+  <p><strong><%= comment.name %></strong> commented <%= time_ago_in_words(comment.created_at) %> ago:</p>
+  <p>"<%= comment.body %>"</p>
+  <p><em>Email: </em><%= comment.email %> | <em>Website: </em><%= comment.website %> | <em>PostID: </em><%= comment.post_id %></p>
+  <p><%= link_to 'SHOW', post_comment_path(comment.post_id, comment.id) %> | 
+  <%= link_to 'EDIT', edit_post_comment_path(comment.post_id, comment.id) %> | 
+  <%= link_to 'DESTROY', post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <hr />
+  </br>
+<% end %>
 
 <br>
 
-<%= link_to 'New Comment', new_post_comment_path %>
+<%= link_to 'NEW COMMENT', new_post_comment_path %>
