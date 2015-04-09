@@ -4,6 +4,10 @@ class CommentsController < ApplicationController
   before_filter :header_links # Allow @header_links from PagesHelper to be accessible
   before_filter :social_buttons # Allow @social_buttons from PagesHelper to be accessible
   
+  def index
+    @comments = Comment.all
+  end
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create!(params[:comment]) #TODO: get rid of !
