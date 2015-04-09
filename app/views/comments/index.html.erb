@@ -8,7 +8,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Website</th>
-      <th>Content</th>
+      <th>Body</th>
       <th>Post</th>
       <th colspan="3"></th>
     </tr>
@@ -20,10 +20,10 @@
         <td><%= comment.name %></td>
         <td><%= comment.email %></td>
         <td><%= comment.website %></td>
-        <td><%= comment.content %></td>
+        <td><%= comment.body %></td>
         <td><%= comment.post %></td>
         <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Edit', edit_post_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

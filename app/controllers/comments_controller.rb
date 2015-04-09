@@ -8,14 +8,18 @@ class CommentsController < ApplicationController
     @comments = Comment.all
   end
 
+  def new
+    @comment = Comment.new
+  end
+
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.create!(params[:comment]) #TODO: get rid of !
+    @comment = @post.comments.create!(params.require(:comment).permit!)  #TODO: get rid of !
     redirect_to @post
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def comment_params
-    params.require(:comment).permit(:name, :email, :website, :content, :post_id)
+    params.require(:comment).permit(:name, :email, :website, :body)
   end
 end
