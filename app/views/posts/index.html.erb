@@ -3,17 +3,20 @@
 <h1>All Posts</h1>
 <hr/>
 <div class="container-fluid">
-  <% @posts.each do |post| %>
-    <h2 class="left-align"><%= link_to post.title, post %></h2>
-    <p><%= simple_format(post.body) %></p>
-    <p><%= link_to 'SHOW', post %> | <%= link_to 'EDIT', edit_post_path(post) %> | <%= link_to 'DESTROY', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </p>
-    </br>
-    <hr/>
-    </br>
-  <% end %>
+  <div class="padded-content">
+    <% @posts.each do |post| %>
+      <h2 class="left-align"><%= link_to post.title, post %></h2>
+      <p><%= simple_format(post.body) %></p>
+      <div>
+        <%= link_to 'Read More...', post, class: "btn btn-default btn-lg pretty-button"%>
+      </div>
+      </br>
+      <hr/>
+      </br>
+    <% end %>
 
-  <br>
+    <br>
 
-  <%= link_to 'New Post', new_post_path %>
+    <%= link_to 'New Post', new_post_path %>
+  </div>
 </div>
