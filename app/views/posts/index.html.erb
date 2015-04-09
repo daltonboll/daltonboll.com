@@ -5,7 +5,7 @@
 <div class="container-fluid">
   <% @posts.each do |post| %>
     <h4><%= link_to post.title, post %></h4>
-    <p><%= post.body %></p>
+    <p><%= simple_format(post.body) %></p>
     <p><%= link_to 'SHOW', post %> | <%= link_to 'EDIT', edit_post_path(post) %> | <%= link_to 'DESTROY', post, method: :delete, data: { confirm: 'Are you sure?' } %>
     </p>
     </br>

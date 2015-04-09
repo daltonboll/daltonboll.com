@@ -8,7 +8,7 @@
 
 <p>
   <b>Body:</b>
-  <%=h @post.body %>
+  <%=h simple_format(@post.body) %>
 </p>
 
 <h2>Comments</h2>
@@ -20,7 +20,7 @@
   </p>
 
   <p>
-    <%=h c.body %>
+    <%=h simple_format(c.body) %>
   </p>
   <hr/>
 <% end %>
