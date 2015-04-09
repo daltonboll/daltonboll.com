@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Showing All Comments For '<%= @post.title %>'</h2>
+<h2>Showing <%= "#{@post.comments.count} #{'Comment'.pluralize(@post.comments.count)}" %> From '<%= link_to @post.title, post_path(@post) %>'</h2>
 <hr/>
 <div class="container-fluid">
   <% @post.comments.each do |comment| %>
