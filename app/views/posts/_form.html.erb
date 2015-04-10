@@ -12,14 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <h6>Title</h6>
     <%= f.text_field :title %>
   </div>
+  </br>
   <div class="field">
-    <%= f.label :body %><br>
+    <h6>Body</h6>
     <%= f.text_area :body %>
   </div>
+  </br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-default btn-lg pretty-button' %>
   </div>
+  </br>
 <% end %>
