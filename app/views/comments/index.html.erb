@@ -1,24 +1,25 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container-fluid">
 <h2>Showing <%= "#{@post.comments.count} #{'Comment'.pluralize(@post.comments.count)}" %> From '<%= link_to @post.title, post_path(@post) %>'</h2>
 <hr/>
-<div class="container-fluid">
-  <% @post.comments.each do |comment| %>
-    <p><strong><%= comment.name %></strong> commented <%= time_ago_in_words(comment.created_at) %> ago:</p>
+  <div class="padded-content">
+    <% @post.comments.each do |comment| %>
+      <p><strong><%= comment.name %></strong> commented <%= time_ago_in_words(comment.created_at) %> ago:</p>
 
-    <p>"<%= comment.body %>"</p>
+      <p>"<%= comment.body %>"</p>
 
-    <p><em>Email: </em><%= comment.email %> | <em>Website: </em><%= comment.website %> | <em>PostID: </em><%= comment.post_id %></p>
+      <p><em>Email: </em><%= comment.email %> | <em>Website: </em><%= comment.website %> | <em>PostID: </em><%= comment.post_id %></p>
 
-    <p><%= link_to 'SHOW', post_comment_path(comment.post_id, comment.id) %> | 
-    <%= link_to 'EDIT', edit_post_comment_path(comment.post_id, comment.id) %> | 
-    <%= link_to 'DESTROY', post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    
-    <hr />
-    </br>
-  <% end %>
+      <p><%= link_to 'SHOW', post_comment_path(comment.post_id, comment.id) %> | 
+      <%= link_to 'EDIT', edit_post_comment_path(comment.post_id, comment.id) %> | 
+      <%= link_to 'DESTROY', post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      
+      <hr />
+      </br>
+    <% end %>
 
-  <br>
+    <br>
 
-  <%= link_to 'NEW COMMENT', new_post_comment_path %>
+    <%= link_to 'NEW COMMENT', new_post_comment_path %>
+  </div>
 </div>
