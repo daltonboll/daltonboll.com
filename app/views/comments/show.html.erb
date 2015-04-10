@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
-<h2>Viewing Comment ID#<%= @comment.id %></h2>
+<div class="container-fluid">
+  <div class="padded-content">
+    <h2>Viewing Comment ID#<%= @comment.id %></h2>
 
-<p><strong><%= @comment.name %></strong> commented <%= time_ago_in_words(@comment.created_at) %> ago:</p>
+    <p><strong><%= @comment.name %></strong> commented <%= time_ago_in_words(@comment.created_at) %> ago:</p>
 
-<p>"<%= @comment.body %>"</p>
+    <p>"<%= @comment.body %>"</p>
 
-<p><em>Email: </em><%= @comment.email %> | <em>Website: </em><%= @comment.website %> | <em>PostID: </em><%= @comment.post_id %></p>
+    <p><em>Email: </em><%= @comment.email %> | <em>Website: </em><%= @comment.website %> | <em>PostID: </em><%= @comment.post_id %></p>
 
-<p><%= link_to 'EDIT', edit_post_comment_path(@comment.post_id, @comment.id) %> | <%= link_to 'DESTROY', post_comment_path(@comment.post_id, @comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p><%= link_to 'EDIT', edit_post_comment_path(@comment.post_id, @comment.id) %> | <%= link_to 'DESTROY', post_comment_path(@comment.post_id, @comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
 
-<%= link_to 'Back', post_comments_path %>
-
+    <%= link_to 'Back', post_comments_path %>
+  </div>
+</div>
