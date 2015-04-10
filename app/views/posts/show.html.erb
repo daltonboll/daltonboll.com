@@ -12,7 +12,12 @@
 <div class="container-fluid comments">
   <div class="padded-content">
     <% @post.comments.each do |comment| %>
-      <p><strong><%= comment.name %></strong> &emsp; <date><%= time_ago_in_words(comment.created_at) %> ago</date>
+      <p>
+        <% if not comment.website.blank? %>
+          <strong><%= link_to comment.name, comment.get_formatted_website %></strong>
+        <% else %>
+          <strong><%= comment.name %></strong>
+        <% end %> &emsp; <date><%= time_ago_in_words(comment.created_at) %> ago</date>
       </p>
       <p>
         <%= simple_format(comment.body) %>
