@@ -1,5 +1,7 @@
 <h1>New Comment</h1>
-<%= render 'form' %>
-
-<% puts "BEFORE THE LINK params: #{params}" %>
-<%= link_to 'Back', post_comments_path %>
+<div class="container-fluid">
+  <div class="padded-content">
+    <%= render 'form' %>
+    <%= link_to 'Back', post_comments_path %>
+  </div>
+</div>
