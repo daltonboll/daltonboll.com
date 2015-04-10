@@ -2,7 +2,6 @@
   <% if @comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-<% puts "testing....." %>
       <ul>
       <% @comment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,22 +11,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <h6>Name*</h6>
     <%= f.text_field :name %>
   </div>
+  </br>
   <div class="field">
-    <%= f.label :email %><br>
+    <h6>Email*</h6>
     <%= f.text_field :email %>
   </div>
+  </br>
   <div class="field">
-    <%= f.label :website %><br>
+    <h6>Website (optional)</h6>
     <%= f.text_field :website %>
   </div>
+  </br>
   <div class="field">
-    <%= f.label :body %><br>
+    <h6>Comment*</h6>
     <%= f.text_area :body %>
   </div>
+  </br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit Comment', class: 'btn btn-default btn-lg pretty-button' %>
   </div>
+  </br>
 <% end %>
