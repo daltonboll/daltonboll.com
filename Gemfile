@@ -14,7 +14,7 @@ gem 'pg',          			'0.17.1'
 #gem 'taps'
 gem 'fastimage'
 gem "font-awesome-rails"
-gem 'devise', '~> 3.4.1'
+gem 'devise'
 gem 'sitemap_generator'
 gem 'sdoc',                 '0.4.0', group: :doc
 

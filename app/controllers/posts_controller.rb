@@ -1,9 +1,5 @@
 class PostsController < ApplicationController
-  include PagesHelper
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_filter :header_links # Allow @header_links from PagesHelper to be accessible
-  before_filter :social_buttons # Allow @social_buttons from PagesHelper to be accessible
-
+  
   # GET /posts
   # GET /posts.json
   def index

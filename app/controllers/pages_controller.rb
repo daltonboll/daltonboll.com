@@ -1,9 +1,5 @@
 class PagesController < ApplicationController
-  include PagesHelper
   
-  before_filter :header_links # Allow @header_links from PagesHelper to be accessible
-  before_filter :social_buttons # Allow @social_buttons from PagesHelper to be accessible
-
   def help
     @help_title = "Help"
   end
