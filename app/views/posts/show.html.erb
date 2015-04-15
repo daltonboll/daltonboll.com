@@ -22,7 +22,7 @@
       <p>
         <%= simple_format(comment.body) %>
       </p>
-      <hr/>
+      <hr class="full-width" />
     <% end %>
     <h5>Leave a comment below:</h5>
     <%= form_for [@post, Comment.new] do |f| %>
