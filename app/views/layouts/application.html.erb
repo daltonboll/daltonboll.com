@@ -19,6 +19,11 @@
         <% if alert %>
           <p class="alert alert-danger"><%= alert %></p>
         <% end %>
+        <% if user_signed_in? and current_user.is_admin? %>
+          <div id="logged_in_blurb">
+            Signed in as <strong>Admin</strong>
+          </div>
+        <% end %>
         <%= yield %>
       </div>
     </div>
