@@ -1,7 +1,10 @@
 <h1>Editing Post</h1>
 <div class="container-fluid">
   <div class="padded-content">
-    <%= render 'form' %>
+    <% if user_signed_in? and current_user.is_admin? %>
+      <%= render 'form' %>
+    <% else redirect_to post_path %>
+    <% end %>
     <%= link_to 'Show', @post %> |
     <%= link_to 'Back', post_path %>
   </div>

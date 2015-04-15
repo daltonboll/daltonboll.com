@@ -10,9 +10,11 @@
 
       <p><em>Email: </em><%= comment.email %> | <em>Website: </em><%= comment.website %> | <em>PostID: </em><%= comment.post_id %></p>
 
-      <p><%= link_to 'SHOW', post_comment_path(comment.post_id, comment.id) %> | 
-      <%= link_to 'EDIT', edit_post_comment_path(comment.post_id, comment.id) %> | 
-      <%= link_to 'DESTROY', post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <% if user_signed_in? and current_user.is_admin? %>
+        <p><%= link_to 'SHOW', post_comment_path(comment.post_id, comment.id) %> | 
+        <%= link_to 'EDIT', edit_post_comment_path(comment.post_id, comment.id) %> | 
+        <%= link_to 'DESTROY', post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
       
       <hr />
       </br>
@@ -20,6 +22,8 @@
 
     <br>
 
-    <%= link_to 'NEW COMMENT', new_post_comment_path %>
+    <% if user_signed_in? and current_user.is_admin? %>
+      <%= link_to 'NEW COMMENT', new_post_comment_path %>
+    <% end %>
   </div>
 </div>

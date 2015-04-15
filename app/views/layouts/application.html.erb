@@ -21,7 +21,7 @@
         <% end %>
         <% if user_signed_in? and current_user.is_admin? %>
           <div id="logged_in_blurb">
-            Signed in as <strong>Admin</strong>
+            Signed in as <strong>Admin</strong>. | <%= link_to "Logout", destroy_user_session_path, method: :delete %>
           </div>
         <% end %>
         <%= yield %>
