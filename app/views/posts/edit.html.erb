@@ -3,7 +3,8 @@
   <div class="padded-content">
     <% if user_signed_in? and current_user.is_admin? %>
       <%= render 'form' %>
-    <% else redirect_to post_path %>
+    <% else 
+      custom_redirect post_path %>
     <% end %>
     <%= link_to 'Show', @post %> |
     <%= link_to 'Back', post_path %>

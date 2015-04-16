@@ -14,11 +14,18 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    if user_signed_in? and current_user.is_admin?
+      @post = Post.new
+    else
+      redirect_to posts_path
+    end
   end
 
   # GET /posts/1/edit
   def edit
+    if not user_signed_in? or not current_user.is_admin?
+      redirect_to post_path(@post)
+    end
   end
 
   # POST /posts

@@ -1,25 +1,30 @@
 class CommentsController < ApplicationController
 
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :index]
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   
   def index
     @comments = Comment.all
-    @post = Post.find(params[:post_id])
   end
 
   def new
-    @comment = Comment.new
+    if user_signed_in? and current_user.is_admin?
+      @comment = Comment.new
+    else
+      redirect_to post_path(@post)
+    end
   end
 
   def show
   end
 
   def edit
+    if not user_signed_in? or not current_user.is_admin?
+      redirect_to post_comment_path(@post, @comment)
+    end
   end
 
   def create
-    @post = Post.find(params[:post_id])
     @comment = @post.comments.create!(params.require(:comment).permit!)  #TODO: get rid of !
     redirect_to @post
   end
