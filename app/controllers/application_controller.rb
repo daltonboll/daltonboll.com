@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
   include PagesHelper
   before_filter :header_links # Allow @header_links from PagesHelper to be accessible
   before_filter :social_buttons # Allow @social_buttons from PagesHelper to be accessible
+  before_filter :set_registration # Allow checking of open registration across application
+
+
 
 
   # Ensure 301 redirect from heroku
@@ -18,6 +21,10 @@ class ApplicationController < ActionController::Base
       # HTTP 301 is a "permanent" redirect
       redirect_to "http://#{APP_DOMAIN}", :status => 301
     end
+  end
+
+  def set_registration
+    @registration_open = false # Are we accepting new user registration?
   end
 
 end
