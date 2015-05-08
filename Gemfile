@@ -12,7 +12,7 @@ gem 'jbuilder',             '2.2.3'
 #gem 'sqlite3',     			'1.3.9'
 gem 'pg',          			'0.17.1'
 #gem 'taps'
-gem 'fastimage'
+#gem 'fastimage'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'sitemap_generator'

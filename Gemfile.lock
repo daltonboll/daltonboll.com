@@ -36,7 +36,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.7)
     ansi (1.5.0)
     arel (6.0.0)
     autoprefixer-rails (5.1.7)
@@ -74,8 +73,6 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.3.0)
-    fastimage (1.6.8)
-      addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.6)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
@@ -235,7 +232,6 @@ DEPENDENCIES
   byebug (= 3.4.0)
   coffee-rails (= 4.1.0)
   devise
-  fastimage
   font-awesome-rails
   foreman
   guard-minitest (= 2.3.1)
